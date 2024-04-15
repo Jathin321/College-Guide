@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Apply a simple scale animation on button hover */
+        /* .btn-primary{
+            background-color: transparent;
+
+        } */
+        .btn-primary:hover {
+            transform: scale(1.05);
+
+        }
+        body {
+            background-image: url('./college_bg.jpg');
+            background-size: cover; /* Optional: Adjust the image size */
+            background-repeat: no-repeat; /* Optional: Prevent image repetition */
+        }
+        
+    </style>
+    <style>
+        #image img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            /* left: 47%;
+            top: 200px; */
+        }
+    </style>
+</head>
+<body >
+    <div  id="image" class="ms-3 mt-2">
+        <img src="clgs2.jpg" alt="Bootstrap1" width="500" height="500"></div>
+    <div class="container position-relative position-absolute top-50 start-50 translate-middle">
+        <h1 class="text-center mb-5" style="color: azure; text-shadow: 4px 4px 5px rgb(28, 24, 24);  ">Welcome to EAMCET College Guide</h1>
+    </div>
+    <div class="position-relative position-absolute top-50 start-50 translate-middle mt-3">
+       <a href="/input.html"><button class="btn btn-primary btn-center mt-5">Get Started</button></a>
+    </div>
+    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5">
+        <h5>Want To Know What Our Website Is For? <a href="know_more.html">Know More</a></h5>
+    </div>
+   
+     <script>
+        $(document).ready(function() {
+            $('.fade').addClass('show');
+        });
+    </script>
+</body>
+</html>

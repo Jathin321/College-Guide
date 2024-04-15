@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 2</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        /* Apply a simple scale animation on button hover */
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+        .btn-secondary:hover {
+            transform: scale(1.05);
+        }
+        body {
+            background-image: url('./input.jpg');
+            background-size: cover; /* Optional: Adjust the image size */
+            background-repeat: no-repeat; /* Optional: Prevent image repetition */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+        <a class="navbar-brand ps-4 fs-2" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">College Guide</a>
+    </nav>
+    <form action="/clgs.html"  method="GET">
+        <div class="container mt-5">
+            <h2>Welcome <strong id="welcome" style="font-size: 40px;">Name</strong> , please enter required details...</h2>
+            <div class="col-md-4  mt-5">
+    
+                <label for="inputState" class="form-label fw-bold">Location</label>
+    
+                <select id="inputState" class="form-select border border-secondary" name="dist" required>
+    
+                    <option value="">Choose...</option>
+                    <option value="Srikakulam">Srikakulam</option>
+                    <option value="Vizianagaram">Vijayanagaram</option>
+                    <option value="Visakhapatnam" >Visakhapatnam</option>
+                    <option value="East-Godavari">East-Godavari</option>
+                    <option value="West-Godavari">West-Godavari</option>
+                    <option value="Krishna">Krishna</option>
+                    <option value="Guntur">Guntur</option>
+                    <option value="Prakasam">Prakasam</option>
+                    <option value="Kurnool">Kurnool</option>
+                    <option value="Ananthapur">Ananthapur</option>
+                    <option value="Y.S.R.kadapa">Y.S.R.kadapa</option>
+                    <option value="Nellore">Nellore</option>
+                    <option value="Chittore">Chittore</option>
+                </select>
+
+                <div class="accordion mt-4" id="accordionExample">
+                    <div class="accordion-item border border-secondary">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Check your Details
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                         <div><strong>Name : </strong><p id="_name" name="_name"></p></div>
+                         <div><strong>Rank : </strong><p id="_rank" name="_rank"></p></div>
+                         <div><strong>Gender : </strong><p id="_gender"></p></div>
+                         <div><strong>Caste : </strong><p id="_caste"></p></div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="d-grid gap-2 d-md-block mt-4">
+                <button class="btn btn-secondary" type="button" onclick="goback()">Back</button>
+                <button class="btn btn-primary" type="submit">Next</button>
+            </div>
+        </div>
+    </form>
+    <script src="/bootstrap.min.js"></script>
+    <script>
+        let name = sessionStorage.getItem("name");
+        let rank = sessionStorage.getItem("rank");
+        let gender = sessionStorage.getItem("gender");
+        let caste = sessionStorage.getItem("caste");
+        document.getElementById("welcome").innerHTML = name;
+        document.getElementById("_name").innerHTML = name;
+        document.getElementById("_rank").innerHTML = rank;
+        document.getElementById("_gender").innerHTML = gender;
+        document.getElementById("_caste").innerHTML = caste;
+        function saveName() {
+           
+            window.location.href = "clgs.html";
+        }
+    </script>
+    <script>
+        function goback()
+        {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colleges</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <!-- <style>body {
+    background-image: url('./input.jpg');
+    background-size: cover; /* Optional: Adjust the image size */
+    background-repeat: no-repeat; /* Optional: Prevent image repetition */
+}</style> -->
+  <!-- <link href="/favicon.ico" type="image/x-icon" rel="icon" /> -->
+</head>
+
+<body>
+  <nav class="navbar bg-primary" data-bs-theme="dark">
+    <a class="navbar-brand ps-4 fs-2" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">College Guide</a>
+  </nav>
+  <form>
+    <input type="text" class="form-control mt-3 mx-auto p-2 w-75 border-secondary" onkeyup="_search()" id="search-item"
+      placeholder="Search By College Code or College Name Or College Location Or Branch">
+  </form>
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="container col-md-5 col-sm-6 border border-secondary" style="height: 480px; overflow-y: scroll;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Code</th>
+              <th scope="col">Place</th>
+              <th scope="col">Branch</th>
+              <th scope="col">Rank</th>
+              <th scope="col">Eligibility</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="clgs_body">
+            <!-- <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="VIGNAN'S INSTITUTE OF INFORMATION TECHNOLOGY" id="abbr"
+                  style="text-decoration: none;">VIVP</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">IT</td>
+              <td>25000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="VIGNAN'S INSTITUTE OF INFORMATION TECHNOLOGY" id="abbr"
+                  style="text-decoration: none;">VIVP</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">CSE</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="VIGNAN'S INSTITUTE OF INFORMATION TECHNOLOGY" id="abbr"
+                  style="text-decoration: none;">VIVP</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">CSE - CS</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="VIGNAN'S INSTITUTE OF INFORMATION TECHNOLOGY" id="abbr"
+                  style="text-decoration: none;">VIVP</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">AIDS</td>
+              <td>25000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="RAGHU ENGINEERING COLLEGE" id="abbr"
+                  style="text-decoration: none;">RAGU</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">CSE - AI</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="RAGHU ENGINEERING COLLEGE" id="abbr"
+                  style="text-decoration: none;">RAGU</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">CSE - DS</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="RAGHU ENGINEERING COLLEGE" id="abbr"
+                  style="text-decoration: none;">RAGU</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">ECE</td>
+              <td>25000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="RAGHU ENGINEERING COLLEGE" id="abbr"
+                  style="text-decoration: none;">RAGU</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">ECM</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES" id="abbr"
+                  style="text-decoration: none;">ANITS</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">MECH</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES" id="abbr"
+                  style="text-decoration: none;">ANITS</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">CIVIL</td>
+              <td>25000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES" id="abbr"
+                  style="text-decoration: none;">ANITS</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">NIL</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr>
+            <tr id="tr" class="search">
+              <th scope="row" id="th"><abbr title="ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES" id="abbr"
+                  style="text-decoration: none;">ANITS</abbr></th>
+              <td>VISAKHAPATNAM</td>
+              <td id="br">EEE</td>
+              <td>20000</td>
+             <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+      <div class="container col-sm-6 border border-secondary" style="height: 480px; overflow-y: scroll;">
+        <table class="table" id="table_data">
+          <thead>
+            <tr>
+              <th scope="col">Code</th>
+              <!-- <th scope="col">Name</th> -->
+              <th scope="col">Location</th>
+              <th scope="col">Branch</th>
+              <th scope="col">Rank</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr>
+              <td colspan="5" class="empty">
+                <div class="alert alert-info" role="alert">
+                  Add Colleges To Your List
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-warning alert-dismissible fade show container p-2 mt-3" role="alert">
+    <strong>Warning!</strong> Make Sure You Save each And Every Time You update The list , And Also Save Before You
+    Proceed To The Next Page
+  </div>
+
+  <div class="ms-5">
+    <button type="button" class="btn btn-secondary  mb-4" style="width: 32%;" onclick="back()">Back</button>
+    <button type="button" class="btn btn-warning  mb-4" style="width: 32%;" onclick="save()">Save</button>
+    <button onclick="Proceed()" type="button" class="btn btn-primary  mb-4" style="width: 32%;">Proceed</button>
+  </div>
+
+  <script>
+    let name = sessionStorage.getItem("name");
+    let rank = sessionStorage.getItem("rank");
+    let gender = sessionStorage.getItem("gender");
+    let caste = sessionStorage.getItem("caste");
+    // console.log(name);
+    // console.log(rank);
+    // console.log(gender);
+    // console.log(caste);
+    let table_data = document.getElementById('table_data').innerHTML;
+    // console.log(table_data);
+
+    fetch('final_jsondata.json').then(res => res.json()).then(jsondata =>{
+      if(gender == 'Male')
+      {
+        if (gender == 'Male' && caste == 'bc-a') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bca_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bca_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'bc-b') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'bc-c') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcc_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcc_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'bc-c') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcc_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcc_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'bc-d') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcd_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcd_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'bc-e') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bce_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bce_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'sc') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].sc_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].sc_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'st') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].st_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].st_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'ews') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].ews_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].ews_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'oc') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].oc_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].oc_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Male' && caste == 'bc-e') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bce_boys >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bce_boys}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+    }
+    
+    else
+      {
+        if (gender == 'Female' && caste == 'bc-a') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bca_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bca_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'bc-b') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].bcb_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'bc-c') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].bcc_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcc_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'bc-c') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].bcc_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcc_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'bc-d') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].bcd_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcd_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'bc-e') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].bce_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bce_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'sc') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].sc_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].sc_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'st') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].st_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].st_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'ews') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].ews_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].ews_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'oc') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].oc_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].oc_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+
+    else if (gender == 'Female' && caste == 'bc-e') {
+      for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_girls);
+
+        if (jsondata[i].bce_girls >= rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bce_girls}</td>
+              <td><button type="button" class="btn btn border border-success"
+                  style="color : green"><ion-icon name="checkmark-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+       for (let i = 0; i < jsondata.length; i++) {
+        // console.log(jsondata[i].bca_boys);
+
+        if (jsondata[i].bcb_boys < rank) {
+          var clgs_body = document.getElementById('clgs_body');
+          // console.log(clgs_body.innerHTML)
+          var tr = document.createElement('tr');
+          tr.setAttribute('class','search');
+          tr.setAttribute('id','tr');
+          // console.log(jsondata[i].inst_name);
+          tr.innerHTML =
+            `<th scope="row" id="th"><abbr title="${jsondata[i].inst_name}" id="abbr"
+                  style="text-decoration: none;">${jsondata[i].inst_code}</abbr></th>
+              <td id="dist">${jsondata[i].place}</td>
+              <td id="branch">${jsondata[i].branch_code}</td>
+              <td id="c_rank">${jsondata[i].bcb_boys}</td>
+              <td><button type="button" class="btn btn border border-danger"
+                  style="color : red"><ion-icon name="alert-outline"></ion-icon></button></td>
+              <td><button type="button" class="btn btn border border-primary" onclick="add(this)"
+                  style="color : rgb(0, 119, 255)">+</button></td>`;
+          clgs_body.appendChild(tr);
+        }
+      }
+    }
+      }
+    });
+
+  </script>
+  <script>
+    window.onload = save();
+    function add(ele) {
+      var tbody = document.getElementById('tbody');
+      var _append = document.createElement('tr');
+
+      if (tbody.firstElementChild) {
+        let x = tbody.firstElementChild.firstElementChild;
+
+        if (x.className == 'empty') {
+          let erase = tbody.firstElementChild;
+          tbody.removeChild(erase);
+        }
+      }
+      _append.innerHTML = ele.parentElement.parentElement.innerHTML;
+      var final_list = _append.innerHTML;
+      // console.log(final_list); 
+      // var plus = ele.parentElement;
+      ele.parentElement.parentElement.removeChild(ele.parentElement.parentElement.lastElementChild);
+      _append.lastElementChild.innerHTML =
+        `<button type="button" id="downkey" class="btn btn border border-primary" onclick="down(this)" style="color : blue"><ion-icon name="arrow-down-sharp"></ion-icon></button>
+       <button type="button" id="upkey" class="btn btn border border-primary" onclick="up(this)" style="color : blue"><ion-icon name="arrow-up-sharp"></ion-icon>
+       <button type="button" class="btn btn border border-danger ms-2" onclick="sub(this)" style="color : red">-</button>`;
+      tbody.appendChild(_append);
+      // var upkey = tbody.getElementById('upkey');
+      // var downkey = tbody.getElementById('downkey');
+      // tbody.firstElementChild.removeChild(upkey);
+      // tbody.lastElementChild.removeChild(downkey);
+      // console.log(_append.innerHTML)
+    }
+
+    function sub(ele) {
+      var tbody = document.getElementById('tbody');
+      var _remove = ele.parentElement.parentElement;
+      var addtoclgsname = ele.parentElement.parentElement.getElementsByTagName('th')[0];
+      var addtoclgsbranch = ele.parentElement.parentElement.getElementsByTagName('td')[1];
+      var addtoclgsrank = ele.parentElement.parentElement.getElementsByTagName('td')[2];
+      // console.log(addtoclgsrank)
+      // console.log(addtoclgsbranch)
+      tbody.removeChild(_remove);
+      var clgs = document.querySelectorAll('#tr');
+      for (let i = 0; i < clgs.length; i++) {
+        var th = clgs[i].getElementsByTagName('th')[0];
+        var _th = clgs[i].getElementsByTagName('td')[1];
+        var _td = clgs[i].getElementsByTagName('td')[2];
+
+        if (th.textContent == addtoclgsname.textContent &&
+          _th.textContent == addtoclgsbranch.textContent &&
+          _td.textContent == addtoclgsrank.textContent) {
+          var plusbutton = document.createElement('td');
+          plusbutton.innerHTML = `<button type="button" class="btn btn border border-primary" onclick="add(this)" style="color : rgb(0, 119, 255)">+</button>`;
+          th.parentElement.appendChild(plusbutton);
+        }
+
+        // var th = clgs[i].getElementById('th');
+        // var abbr = th.getElementById('abbr');
+        // var branches = clgs[i].getElementById('abbr');
+        // console.log(abbr)
+      }
+
+      if (!(tbody.firstElementChild)) {
+        let state = document.createElement('tr');
+        state.innerHTML =
+          `<td colspan="4" class="empty">
+              <div class="alert alert-info" role="alert">
+                Add Colleges To Your List
+              </div>
+          </td>`;
+        tbody.appendChild(state);
+      }
+    }
+
+    function _search() {
+      var search_input = document.getElementById('search-item').value;
+      var searchele = document.querySelectorAll(".search");
+      for (let i = 0; i < searchele.length; i++) {
+        var name_of_clg = searchele[i].getElementsByTagName('th')[0].firstElementChild.title;
+        var code_of_clg = searchele[i].getElementsByTagName('th')[0];
+        var location_of_clg = searchele[i].getElementsByTagName('td')[0];
+        var branch_of_clg = searchele[i].getElementsByTagName('td')[1];
+        var rank_of_clg_branch = searchele[i].getElementsByTagName('td')[2];
+
+        if ((branch_of_clg.textContent.indexOf(search_input.toUpperCase().trim()) > -1) ||
+          (code_of_clg.textContent.indexOf(search_input.toUpperCase().split(" ").join("")) > -1) ||
+          (location_of_clg.textContent.indexOf(search_input.toUpperCase().split(" ").join("")) > -1) ||
+          (rank_of_clg_branch.textContent.indexOf(search_input.toUpperCase().split(" ").join("")) > -1) ||
+          (name_of_clg.split(" ").join("").indexOf(search_input.toUpperCase().split(" ").join("")) > -1)) {
+          searchele[i].style.display = "";
+        }
+        // else if(code_of_clg.textContent.indexOf(search_input) > -1)
+        // {
+        //   searchele[i].style.display = "";
+        // }
+        else {
+          searchele[i].style.display = "none";
+        }
+
+      }
+    }
+
+    function back() {
+      window.history.back();
+    }
+
+    function save() {
+      var tbody = document.getElementById('tbody');
+      sessionStorage.setItem('final_list', tbody.innerHTML);
+      // console.log(tbody.innerHTML);
+      // console.log(tbody.firstElementChild.firstElementChild.firstElementChild.tagName);
+    }
+
+    function Proceed() {
+      window.location.href = 'final_list.html';
+    }
+
+    function down(ele) {
+      if (ele.parentElement.parentElement.nextElementSibling) {
+        let present_html = ele.parentElement.parentElement;
+        let present_inner_html = present_html.innerHTML;
+        let next_html = present_html.nextElementSibling;
+        let next_inner_html = next_html.innerHTML;
+
+        present_html.innerHTML = next_inner_html;
+        next_html.innerHTML = present_inner_html;
+      }
+    }
+
+    function up(ele) {
+      if (ele.parentElement.parentElement.previousElementSibling) {
+        let present_html = ele.parentElement.parentElement;
+        let present_inner_html = present_html.innerHTML;
+        let previous_html = present_html.previousElementSibling;
+        let previous_inner_html = previous_html.innerHTML;
+
+        present_html.innerHTML = previous_inner_html;
+        previous_html.innerHTML = present_inner_html;
+      }
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="/bootstrap.min.js"></script>
+</body>
+
+</html>
