@@ -1,0 +1,26 @@
+/* Hover effect for buttons */
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Background styling */
+body {
+    background-image: url('./input.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Navbar styling */
+.navbar {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Form input field borders */
+.form-control.border-secondary {
+    border: 1px solid #6c757d;
+}
+
+/* Select input styling */
+.form-select.border-secondary {
+    border: 1px solid #6c757d;
+}

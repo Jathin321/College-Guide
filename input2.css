@@ -1,0 +1,26 @@
+/* Hover effects for buttons */
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+/* Background styling */
+body {
+    background-image: url('./input.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Navbar font */
+.navbar {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Input field styling */
+.form-select.border-secondary, .form-control.border-secondary {
+    border: 1px solid #6c757d;
+}
+
+/* Accordion item border */
+.accordion-item.border-secondary {
+    border: 1px solid #6c757d;
+}
